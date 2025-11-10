@@ -7,7 +7,7 @@ def fetch_data(query):
     response.raise_for_status()
     return response.json()["data"]["Page"]["media"]
 
-# 🔹 1. Populares (para o bloco da home)
+# Populares (para o bloco da home)
 def get_popular_animes():
     query = """
     query {
@@ -22,7 +22,7 @@ def get_popular_animes():
     """
     return fetch_data(query)
 
-# 🔹 2. Tendência (para o bloco da home)
+# Tendência (para o bloco da home)
 def get_trending_animes():
     query = """
     query {
@@ -37,7 +37,7 @@ def get_trending_animes():
     """
     return fetch_data(query)
 
-# 🔹 3. Populares da temporada (para o bloco da home)
+# Populares da temporada (para o bloco da home)
 def get_seasonal_animes():
     query = """
     query {
@@ -52,7 +52,7 @@ def get_seasonal_animes():
     """
     return fetch_data(query)
 
-# 🔹 4. Lista completa (para /animes)
+# Lista completa (para /animes)
 def get_all_animes():
     query = """
     query {
