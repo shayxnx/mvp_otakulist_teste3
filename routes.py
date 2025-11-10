@@ -10,7 +10,7 @@ from anilist_api import (
 @app.route('/')
 def homepage():
     populares = get_popular_animes()
-    print("Populares:", populares)  # 👈 Teste
+    print("Populares:", populares)  
     trends = get_trending_animes()
     temporada = get_seasonal_animes()
     return render_template(
